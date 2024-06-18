@@ -1,39 +1,29 @@
-#include <Audio.h>
-#include <DAC.h>
+//Mario's Ideas
+//MAX7219 - using Led Control library to display all LEDs one by one
+#include <LedControl.h>
 
+int DIN = 7;
+int CS = 6;
+int CLK = 5;
 
-#include "Arduino.h"
-#include "WiFi.h"
-
-#define I2S_DOUT     25
-#define I2S_BCLK     27
-#define I2S_LRC      26
-
-Audio audio;
-
-const char* ssid = "Sourav";
-const char* password = "87654321";
+LedControl lc = LedControl(DIN, CLK, CS, 4); // Initialize with 4 matrices
 
 void setup() {
-  Serial.begin(115200);
-
-  WiFi.disconnect();
-  WiFi.mode(WIFI_STA);
-  WiFi.begin(ssid, password);
-
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(1500);
-    Serial.println("Connecting to WiFi...");
+  for (int i = 0; i < 4; i++) { // Loop through all 4 matrices
+    lc.shutdown(i, false);
+    lc.setIntensity(i, 0);
+    lc.clearDisplay(i);
   }
-
-  Serial.println("Connected to WiFi");
-
-  audio.setPinout(I2S_BCLK, I2S_LRC, I2S_DOUT);
-  audio.setVolume(10); // Adjust the volume (0-21)
-
-  audio.connecttohost("http://vis.media-ice.musicradio.com/CapitalMP3");
 }
 
 void loop() {
-  audio.loop();
+  for (int k = 0; k < 4; k++) { // Loop through all 4 matrices
+    for (int j = 0; j < 8; j++) {
+      for (int i = 0; i < 8; i++) {
+        lc.setLed(k, j, i, true);
+        delay(100);
+        lc.setLed(k, j, i, false);
+      }
+    }
+  }
 }
