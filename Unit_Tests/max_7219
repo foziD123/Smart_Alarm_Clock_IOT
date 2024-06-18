@@ -1,0 +1,39 @@
+#include <Audio.h>
+#include <DAC.h>
+
+
+#include "Arduino.h"
+#include "WiFi.h"
+
+#define I2S_DOUT     25
+#define I2S_BCLK     27
+#define I2S_LRC      26
+
+Audio audio;
+
+const char* ssid = "Sourav";
+const char* password = "87654321";
+
+void setup() {
+  Serial.begin(115200);
+
+  WiFi.disconnect();
+  WiFi.mode(WIFI_STA);
+  WiFi.begin(ssid, password);
+
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(1500);
+    Serial.println("Connecting to WiFi...");
+  }
+
+  Serial.println("Connected to WiFi");
+
+  audio.setPinout(I2S_BCLK, I2S_LRC, I2S_DOUT);
+  audio.setVolume(10); // Adjust the volume (0-21)
+
+  audio.connecttohost("http://vis.media-ice.musicradio.com/CapitalMP3");
+}
+
+void loop() {
+  audio.loop();
+}
