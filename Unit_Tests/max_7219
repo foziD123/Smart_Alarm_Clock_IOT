@@ -1,4 +1,4 @@
-//Mario's Ideas
+
 //MAX7219 - using Led Control library to display all LEDs one by one
 #include <LedControl.h>
 
