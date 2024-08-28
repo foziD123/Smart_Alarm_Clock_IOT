@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "36253987314",
+    "firebase_url": "https://totemic-client-604-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "totemic-client-604",
+    "storage_bucket": "totemic-client-604.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:36253987314:android:3c0ef3751fb2a16966bb6b",
+        "android_client_info": {
+          "package_name": "com.app123.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "36253987314-83j74c4kl32i4qjjbr40trqmj91n4gv5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKSran7D8iiD-6q_JAAE2LKTb3zioSVeI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "36253987314-83j74c4kl32i4qjjbr40trqmj91n4gv5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:36253987314:android:47e7f0069d234cf566bb6b",
+        "android_client_info": {
+          "package_name": "com.appdemo123.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "36253987314-83j74c4kl32i4qjjbr40trqmj91n4gv5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKSran7D8iiD-6q_JAAE2LKTb3zioSVeI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "36253987314-83j74c4kl32i4qjjbr40trqmj91n4gv5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
