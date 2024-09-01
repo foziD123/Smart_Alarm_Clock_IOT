@@ -43,7 +43,7 @@ This project is part of the ICST Lab at the Technion Institute of Technology. It
 
 ### ESP32
 1. Clone the repository.
-2. Open the Arduino IDE and load the `.ino` file for the ESP32.
+2. Open the Arduino IDE and load the `.ini` file for the ESP32.
 3. Install the necessary libraries (Firebase, WiFi, Time, etc.).
 4. Upload the code to your ESP32 device.
 
