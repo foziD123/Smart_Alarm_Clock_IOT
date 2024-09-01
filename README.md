@@ -27,6 +27,13 @@ This project is part of the ICST Lab at the Technion Institute of Technology. It
 - **Text-to-Speech:** For reading out tasks and notifications.
 - **Display Control:** Manages the display of time, date, quotes, and other information on the device.
 
+### Hardware Used
+- ESP32
+- MAX7219
+- MAX98357
+- MicroSD reader
+- Four physical buttons
+
 ### Android App
 - **Programming Language:** Dart
 - **Framework:** Flutter
