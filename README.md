@@ -2,6 +2,11 @@
 
 This project is part of the ICST Lab at the Technion Institute of Technology. It is a comprehensive smart alarm clock system that includes an Arduino-based ESP32 microcontroller and a companion Android app developed using Dart and Flutter.
 
+### Students 
+- Hanin Sussan
+- Mahmood Masarwa
+- Fawzi Daoud
+
 ## Features
 
 ### ESP32 Microcontroller
